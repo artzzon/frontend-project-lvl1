@@ -15,10 +15,11 @@ console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 while (trueAnswersCount < 3) {
   const randomNumber = Math.floor(Math.random() * 101); // генерация случайного числа
-  const answer = readlineSync.question(`Question: ${randomNumber}\n`, { defaultInput: '' });
+  console.log(`Question: ${randomNumber}`);
+  const answer = readlineSync.question('Your answer: ', { defaultInput: '' });
   if (answer === isEvenNumber(randomNumber)) {
     trueAnswersCount += 1;
-    console.log(`Your answer: ${answer}\nCorrect!`);
+    console.log('Correct!');
   } else {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEvenNumber(randomNumber)}'.\nLet's try again, ${playerName}!`);
     break;
