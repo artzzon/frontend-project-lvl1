@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import welcome from '../src/cli.js';
+import playerName from '../bin/brain-games.js';
 
 let trueAnswersCount = 0; // счетчик правильных ответов
 
@@ -10,19 +10,20 @@ const isEvenNumber = (num) => { // четное ли число?
   return 'no';
 };
 
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
 while (trueAnswersCount < 3) {
   const randomNumber = Math.floor(Math.random() * 101); // генерация случайного числа
-  console.log(`Question: ${randomNumber}`);
-  const answer = readlineSync.question('Answer "yes" if the number is even, otherwise answer "no".', { defaultInput: 'Empty' });
+  const answer = readlineSync.question(`Question: ${randomNumber}\n`, { defaultInput: '' });
   if (answer === isEvenNumber(randomNumber)) {
     trueAnswersCount += 1;
     console.log(`Your answer: ${answer}\nCorrect!`);
   } else {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEvenNumber(randomNumber)}'.\nLet's try again, Test!`);
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${isEvenNumber(randomNumber)}'.\nLet's try again, ${playerName}!`);
     break;
   }
 }
 
 if (trueAnswersCount === 3) {
-  console.log('Congratulations, Test');
+  console.log(`Congratulations, ${playerName}!`);
 }
