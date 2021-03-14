@@ -1,11 +1,11 @@
 import readlineSync from 'readline-sync';
-import getUserNameAndGreeting from './cli.js';
+import getUserName from './cli.js';
 
 const gameLogic = (description, getQuestionAndTrueAnswer) => {
-  let trueAnswersCount = 0; // счетчик правильных ответов
+  let trueAnswersCount = 0;
   console.log('Welcome to the Brain Games!');
 
-  const userName = getUserNameAndGreeting();
+  const userName = getUserName();
 
   console.log(description);
 

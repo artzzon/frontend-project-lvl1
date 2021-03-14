@@ -5,10 +5,10 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 const isEven = (question) => question % 2 === 0;
 
-const getQuestionAndCorrectAnswer = () => {
+const getQuestionAndTrueAnswer = () => {
   const question = getRandomNumber(1, 100);
-  const correctAnswer = isEven(question) ? 'yes' : 'no';
-  return [question, correctAnswer];
+  const trueAnswer = isEven(question) ? 'yes' : 'no';
+  return [question, trueAnswer];
 };
 
-export default () => gameLogic(description, getQuestionAndCorrectAnswer);
+export default () => gameLogic(description, getQuestionAndTrueAnswer);
