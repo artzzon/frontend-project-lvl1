@@ -17,7 +17,7 @@ const getQuestionAndTrueAnswer = () => {
   const question = generationProgression();
   const deleteRandomElement = getRandomNumber(0, question.length - 1);
   const trueAnswer = question.splice(deleteRandomElement, 1, '..');
-  return [question, String(trueAnswer)];
+  return [question.join(' '), String(trueAnswer)];
 };
 
 export default () => gameLogic(description, getQuestionAndTrueAnswer);
