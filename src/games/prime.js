@@ -13,7 +13,7 @@ const getPrimeNumber = (number) => {
 };
 
 const getQuestionAndTrueAnswer = () => {
-  const question = getRandomNumber(1, 50);
+  const question = getRandomNumber(2, 50);
   const trueAnswer = getPrimeNumber(question);
   return [question, String(trueAnswer)];
 };
