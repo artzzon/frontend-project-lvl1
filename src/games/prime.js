@@ -13,10 +13,9 @@ const getPrimeNumber = (number) => {
 };
 
 const getQuestionAndTrueAnswer = () => {
-  const number = getRandomNumber(1, 10)
-  const trueAnswer = getPrimeNumber(number);
-  const question = number;
-  return [question, trueAnswer.toString()];
+  const question = getRandomNumber(1, 10);
+  const trueAnswer = getPrimeNumber(question);
+  return [question, String(trueAnswer)];
 };
 
 export default () => gameLogic(description, getQuestionAndTrueAnswer);
