@@ -3,14 +3,27 @@ import getRandomNumber from '../randomNumber.js';
 
 const description = 'What is the result of the expression?';
 
+const getMathOperation = (firstNumber, mathOperations, secondNumber) => {
+  switch (mathOperations) {
+    case '+':
+      return firstNumber + secondNumber;
+    case '-':
+      return firstNumber - secondNumber;
+    case '*':
+      return firstNumber * secondNumber;
+    default:
+      return null;
+  }
+};
+
 const getQuestionAndTrueAnswer = () => {
   const firstNumber = getRandomNumber(1, 10);
   const secondNumber = getRandomNumber(1, 10);
-  const mathOperations = ['+', '-', '*'];
-  const randomMathOperation = mathOperations[Math.floor(Math.random() * mathOperations.length)];
-  const trueAnswer = eval(firstNumber + randomMathOperation + secondNumber);
+  const mathOperations = '+-*';
+  const randomMathOperation = mathOperations[getRandomNumber(0, mathOperations.length - 1)];
+  const trueAnswer = getMathOperation(firstNumber, randomMathOperation, secondNumber);
   const question = `${firstNumber} ${randomMathOperation} ${secondNumber}`;
-  return [question, trueAnswer.toString()];
+  return [question, String(trueAnswer)];
 };
 
 export default () => gameLogic(description, getQuestionAndTrueAnswer);
