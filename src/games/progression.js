@@ -3,18 +3,16 @@ import getRandomNumber from '../randomNumber.js';
 
 const description = 'What number is missing in the progression?';
 
-const generationProgression = () => {
-  const progressionLength = 10;
-  const progressionStep = getRandomNumber(2, 9);
-  const progression = [];
-  for (let i = 0, j = getRandomNumber(1, 9); i < progressionLength; i += 1, j += progressionStep) {
-    progression.push(j);
+const generationProgression = (progressionStart, progressionStep, progressionLength) => {
+  const progression = [progressionStart];
+  for (let i = 0; i < progressionLength - 1; i += 1) {
+    progression.push(progression[i] + progressionStep);
   }
   return progression;
 };
 
 const getQuestionAndTrueAnswer = () => {
-  const question = generationProgression();
+  const question = generationProgression(getRandomNumber(1, 10), getRandomNumber(1, 4), getRandomNumber(5, 10));
   const deleteRandomElement = getRandomNumber(0, question.length - 1);
   const trueAnswer = question.splice(deleteRandomElement, 1, '..');
   return [question.join(' '), String(trueAnswer)];
