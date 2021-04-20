@@ -2,25 +2,25 @@ import readlineSync from 'readline-sync';
 import getUserName from './cli.js';
 
 const gameLogic = (description, getQuestionAndTrueAnswer) => {
-  let trueAnswersCount = 0;
+  const rounds = 3;
   console.log('Welcome to the Brain Games!');
 
   const userName = getUserName();
 
   console.log(description);
 
-  while (trueAnswersCount < 3) {
-    const [question, trueAnswer] = getQuestionAndTrueAnswer();
-    console.log(`Question: ${question}`);
-    const answer = readlineSync.question('Your answer: ', { defaultInput: '' });
-    if (answer === trueAnswer) {
-      trueAnswersCount += 1;
-      console.log('Correct!');
-    } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.\nLet's try again, ${userName}!`);
-      return;
-    }
+for (let round = 0; round < rounds; round += 1) {
+  const [question, trueAnswer] = getQuestionAndTrueAnswer();
+  console.log(`Question: ${question}`);
+  const answer = readlineSync.question('Your answer: ', { defaultInput: '' });
+  if (answer !== trueAnswer) {
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`);
+    console.log(`Let's try again, ${userName}!`)
+    return;
   }
+  console.log('Correct!');
+}
+
   console.log(`Congratulations, ${userName}!`);
 };
 
