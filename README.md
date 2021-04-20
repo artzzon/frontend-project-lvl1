@@ -9,16 +9,14 @@ This is a kit of games to train your brain.
 
 ## Setup
 
-        $ git clone https://github.com/artzzon/frontend-project-lvl1.git brain-games
+        $ git clone https://github.com/artzzon/frontend-project-lvl1.git
 
-        $cd brain-games
+        $cd frontend-project-lvl1
         $ make install
 
 ## Run
 
-If you want to run the games by typing a game name you have to execute the `npm link` command in the package folder (see [npm link](https://docs.npmjs.com/cli/v7/commands/npm-link))
-
-The games in asciicasts are run by typing a game name
+The games casts are run by typing a game name
 
 Also you can use the following `make` commands in the package folder
 - `make brain-games`
