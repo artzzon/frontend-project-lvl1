@@ -2,6 +2,32 @@
 [![Actions Status](https://github.com/artzzon/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/artzzon/frontend-project-lvl1/actions)
 <a href="https://codeclimate.com/github/artzzon/frontend-project-lvl1"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 ![example workflow](https://github.com/artzzon/frontend-project-lvl1/actions/workflows/eslint.yml/badge.svg)
+
+# Brain games
+
+This is a kit of games to train your brain.
+
+## Setup
+
+        $ git clone https://github.com/artzzon/frontend-project-lvl1.git brain-games
+
+        $cd brain-games
+        $ make install
+
+## Run
+
+If you want to run the games by typing a game name you have to execute the `npm link` command in the package folder (see [npm link](https://docs.npmjs.com/cli/v7/commands/npm-link))
+
+The games in asciicasts are run by typing a game name
+
+Also you can use the following `make` commands in the package folder
+- `make brain-games`
+- `make brain-calc`
+- `make brain-even`
+- `make brain-gcd`
+- `make brain-prime`
+- `make brain-progression`
+
 ### brain-even:
 <a href="https://asciinema.org/a/hRdvE6sOrYcng3G87s49tIb88" target="_blank"><img src="https://asciinema.org/a/hRdvE6sOrYcng3G87s49tIb88.svg" /></a>
 ### brain-calc:
