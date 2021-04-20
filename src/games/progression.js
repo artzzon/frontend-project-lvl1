@@ -14,7 +14,7 @@ const generationProgression = (progressionStart, progressionStep, progressionLen
 const getQuestionAndTrueAnswer = () => {
   const question = generationProgression(
     getRandomNumber(1, 10),
-    getRandomNumber(1, 4),
+    getRandomNumber(1, 3),
     getRandomNumber(5, 10),
   );
   const deleteRandomElement = getRandomNumber(0, question.length - 1);
