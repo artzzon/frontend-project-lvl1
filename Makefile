@@ -8,6 +8,8 @@ brain-calc:
 	bin/brain-calc.js
 brain-gcd:
 	bin/brain-gcd.js
+brain-prime:
+	bin/brain-prime.js
 brain-progression:
 	bin/brain-progression.js
 publish:
