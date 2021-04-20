@@ -3,19 +3,19 @@ import getRandomNumber from '../randomNumber.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const getPrimeNumber = (number) => {
+const isPrimeNumber = (number) => {
   for (let i = 2; i < number; i += 1) {
     if (number % i === 0) {
-      return 'no';
+      return false;
     }
   }
-  return 'yes';
+  return true;
 };
 
 const getQuestionAndTrueAnswer = () => {
   const question = getRandomNumber(2, 50);
-  const trueAnswer = getPrimeNumber(question);
-  return [question, String(trueAnswer)];
+  const trueAnswer = isPrimeNumber(question);
+  return [question, String(trueAnswer ? 'yes' : 'no')];
 };
 
 export default () => gameLogic(description, getQuestionAndTrueAnswer);
