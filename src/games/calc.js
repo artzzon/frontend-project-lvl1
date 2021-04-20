@@ -3,7 +3,7 @@ import getRandomNumber from '../randomNumber.js';
 
 const description = 'What is the result of the expression?';
 
-const getMathOperation = (firstNumber, mathOperations, secondNumber) => {
+const mathOperation = (firstNumber, mathOperations, secondNumber) => {
   switch (mathOperations) {
     case '+':
       return firstNumber + secondNumber;
@@ -21,7 +21,7 @@ const getQuestionAndTrueAnswer = () => {
   const secondNumber = getRandomNumber(1, 10);
   const mathOperations = '+-*';
   const randomMathOperation = mathOperations[getRandomNumber(0, mathOperations.length - 1)];
-  const trueAnswer = getMathOperation(firstNumber, randomMathOperation, secondNumber);
+  const trueAnswer = mathOperation(firstNumber, randomMathOperation, secondNumber);
   const question = `${firstNumber} ${randomMathOperation} ${secondNumber}`;
   return [question, String(trueAnswer)];
 };
