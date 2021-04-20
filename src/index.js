@@ -9,17 +9,17 @@ const gameLogic = (description, getQuestionAndTrueAnswer) => {
 
   console.log(description);
 
-for (let round = 0; round < rounds; round += 1) {
-  const [question, trueAnswer] = getQuestionAndTrueAnswer();
-  console.log(`Question: ${question}`);
-  const answer = readlineSync.question('Your answer: ', { defaultInput: '' });
-  if (answer !== trueAnswer) {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`);
-    console.log(`Let's try again, ${userName}!`)
-    return;
+  for (let round = 0; round < rounds; round += 1) {
+    const [question, trueAnswer] = getQuestionAndTrueAnswer();
+    console.log(`Question: ${question}`);
+    const answer = readlineSync.question('Your answer: ', { defaultInput: '' });
+    if (answer !== trueAnswer) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${trueAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
+      return;
+    }
+    console.log('Correct!');
   }
-  console.log('Correct!');
-}
 
   console.log(`Congratulations, ${userName}!`);
 };

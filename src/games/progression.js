@@ -12,7 +12,11 @@ const generationProgression = (progressionStart, progressionStep, progressionLen
 };
 
 const getQuestionAndTrueAnswer = () => {
-  const question = generationProgression(getRandomNumber(1, 10), getRandomNumber(1, 4), getRandomNumber(5, 10));
+  const question = generationProgression(
+    getRandomNumber(1, 10),
+    getRandomNumber(1, 4),
+    getRandomNumber(5, 10),
+  );
   const deleteRandomElement = getRandomNumber(0, question.length - 1);
   const trueAnswer = question.splice(deleteRandomElement, 1, '..');
   return [question.join(' '), String(trueAnswer)];
