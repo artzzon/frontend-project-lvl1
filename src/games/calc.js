@@ -3,8 +3,8 @@ import getRandomNumber from '../randomNumber.js';
 
 const description = 'What is the result of the expression?';
 
-const mathOperation = (firstNumber, mathSigns, secondNumber) => {
-  switch (mathSigns) {
+const mathOperation = (firstNumber, mathOperation, secondNumber) => {
+  switch (mathOperation) {
     case '+':
       return firstNumber + secondNumber;
     case '-':
