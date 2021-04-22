@@ -12,10 +12,10 @@ const isPrimeNumber = (number) => {
   return true;
 };
 
-const getQuestionAndTrueAnswer = () => {
+const getQuestionAndAnswer = () => {
   const question = getRandomNumber(2, 50);
-  const trueAnswer = isPrimeNumber(question);
-  return [question, String(trueAnswer ? 'yes' : 'no')];
+  const answer = isPrimeNumber(question);
+  return [question, String(answer ? 'yes' : 'no')];
 };
 
-export default () => playGame(description, getQuestionAndTrueAnswer);
+export default () => playGame(description, getQuestionAndAnswer);

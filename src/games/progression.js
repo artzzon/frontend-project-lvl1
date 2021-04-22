@@ -11,15 +11,15 @@ const generationProgression = (progressionStart, progressionStep, progressionLen
   return progression;
 };
 
-const getQuestionAndTrueAnswer = () => {
+const getQuestionAndAnswer = () => {
   const question = generationProgression(
     getRandomNumber(1, 10),
     getRandomNumber(1, 3),
     getRandomNumber(5, 10),
   );
   const deleteRandomElement = getRandomNumber(0, question.length - 1);
-  const trueAnswer = question.splice(deleteRandomElement, 1, '..');
-  return [question.join(' '), String(trueAnswer)];
+  const answer = question.splice(deleteRandomElement, 1, '..');
+  return [question.join(' '), String(answer)];
 };
 
-export default () => playGame(description, getQuestionAndTrueAnswer);
+export default () => playGame(description, getQuestionAndAnswer);

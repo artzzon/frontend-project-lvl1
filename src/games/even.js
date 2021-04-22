@@ -5,10 +5,10 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 const isEven = (question) => question % 2 === 0;
 
-const getQuestionAndTrueAnswer = () => {
+const getQuestionAndAnswer = () => {
   const question = getRandomNumber(1, 100);
-  const trueAnswer = isEven(question) ? 'yes' : 'no';
-  return [question, trueAnswer];
+  const answer = isEven(question) ? 'yes' : 'no';
+  return [question, answer];
 };
 
-export default () => playGame(description, getQuestionAndTrueAnswer);
+export default () => playGame(description, getQuestionAndAnswer);

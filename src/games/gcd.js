@@ -16,12 +16,12 @@ const getGcd = (num1, num2) => {
   return firstNumber + secondNumber;
 };
 
-const getQuestionAndTrueAnswer = () => {
+const getQuestionAndAnswer = () => {
   const firstNumber = getRandomNumber(1, 14);
   const secondNumber = getRandomNumber(1, 14);
   const question = `${firstNumber} ${secondNumber}`;
-  const trueAnswer = getGcd(firstNumber, secondNumber);
-  return [question, String(trueAnswer)];
+  const answer = getGcd(firstNumber, secondNumber);
+  return [question, String(answer)];
 };
 
-export default () => playGame(description, getQuestionAndTrueAnswer);
+export default () => playGame(description, getQuestionAndAnswer);

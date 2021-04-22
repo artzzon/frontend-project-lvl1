@@ -16,14 +16,14 @@ const mathOperation = (firstNumber, mathOperations, secondNumber) => {
   }
 };
 
-const getQuestionAndTrueAnswer = () => {
+const getQuestionAndAnswer = () => {
   const firstNumber = getRandomNumber(1, 10);
   const secondNumber = getRandomNumber(1, 10);
   const mathOperations = '+-*';
   const randomMathOperation = mathOperations[getRandomNumber(0, mathOperations.length - 1)];
-  const trueAnswer = mathOperation(firstNumber, randomMathOperation, secondNumber);
+  const answer = mathOperation(firstNumber, randomMathOperation, secondNumber);
   const question = `${firstNumber} ${randomMathOperation} ${secondNumber}`;
-  return [question, String(trueAnswer)];
+  return [question, String(answer)];
 };
 
-export default () => playGame(description, getQuestionAndTrueAnswer);
+export default () => playGame(description, getQuestionAndAnswer);
