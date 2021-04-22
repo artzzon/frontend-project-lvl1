@@ -17,8 +17,8 @@ const getQuestionAndAnswer = () => {
     getRandomNumber(1, 3),
     getRandomNumber(5, 10),
   );
-  const deleteRandomElement = getRandomNumber(0, progression.length - 1);
-  const answer = progression.splice(deleteRandomElement, 1, '..');
+  const deletedElement = getRandomNumber(0, progression.length - 1);
+  const answer = progression.splice(deletedElement, 1, '..');
   return [progression.join(' '), String(answer)];
 };
 
