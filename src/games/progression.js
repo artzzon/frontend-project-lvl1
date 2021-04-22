@@ -12,14 +12,14 @@ const generationProgression = (progressionStart, progressionStep, progressionLen
 };
 
 const getQuestionAndAnswer = () => {
-  const question = generationProgression(
+  const progression = generationProgression(
     getRandomNumber(1, 10),
     getRandomNumber(1, 3),
     getRandomNumber(5, 10),
   );
-  const deleteRandomElement = getRandomNumber(0, question.length - 1);
-  const answer = question.splice(deleteRandomElement, 1, '..');
-  return [question.join(' '), String(answer)];
+  const deleteRandomElement = getRandomNumber(0, progression.length - 1);
+  const answer = progression.splice(deleteRandomElement, 1, '..');
+  return [progression.join(' '), String(answer)];
 };
 
 export default () => playGame(description, getQuestionAndAnswer);
