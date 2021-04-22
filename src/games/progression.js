@@ -1,4 +1,4 @@
-import gameLogic from '../index.js';
+import playGame from '../index.js';
 import getRandomNumber from '../randomNumber.js';
 
 const description = 'What number is missing in the progression?';
@@ -22,4 +22,4 @@ const getQuestionAndTrueAnswer = () => {
   return [question.join(' '), String(trueAnswer)];
 };
 
-export default () => gameLogic(description, getQuestionAndTrueAnswer);
+export default () => playGame(description, getQuestionAndTrueAnswer);

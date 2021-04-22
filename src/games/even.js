@@ -1,4 +1,4 @@
-import gameLogic from '../index.js';
+import playGame from '../index.js';
 import getRandomNumber from '../randomNumber.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -11,4 +11,4 @@ const getQuestionAndTrueAnswer = () => {
   return [question, trueAnswer];
 };
 
-export default () => gameLogic(description, getQuestionAndTrueAnswer);
+export default () => playGame(description, getQuestionAndTrueAnswer);
