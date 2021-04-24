@@ -18,8 +18,8 @@ const getQuestionAndAnswer = () => {
     getRandomNumber(5, 10),
   );
   const deletedElement = getRandomNumber(0, progression.length - 1);
-  const answer = progression.splice(deletedElement, 1, '..');
-  return [progression.join(' '), String(answer)];
+  const hiddenElement = progression.splice(deletedElement, 1, '..');
+  return [progression.join(' '), String(hiddenElement)];
 };
 
 export default () => playGame(description, getQuestionAndAnswer);
