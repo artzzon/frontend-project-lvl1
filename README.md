@@ -18,7 +18,9 @@ This is a kit of games to train your brain.
 If you want games to run from any directory, take a few simple steps:
 
         $ npm install
+
         $ make install
+        
         $ npm link
 
 Also you can use the following `make` commands in the package folder
