@@ -12,6 +12,7 @@ This is a kit of games to train your brain.
         $ git clone https://github.com/artzzon/frontend-project-lvl1.git
 
         $cd frontend-project-lvl1
+
         $ make install
 
 ## Run
@@ -25,6 +26,11 @@ Also you can use the following `make` commands in the package folder
 - `make brain-gcd`
 - `make brain-prime`
 - `make brain-progression`
+
+If you want games to run from any directory, take a few simple steps:
+
+        $ npm install
+        $ npm link
 
 ### brain-even:
 <a href="https://asciinema.org/a/hRdvE6sOrYcng3G87s49tIb88" target="_blank"><img src="https://asciinema.org/a/hRdvE6sOrYcng3G87s49tIb88.svg" /></a>
