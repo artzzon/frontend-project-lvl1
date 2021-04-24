@@ -15,7 +15,7 @@ const isPrimeNumber = (number) => {
 const getQuestionAndAnswer = () => {
   const randomNumber = getRandomNumber(2, 50);
   const isPrime = isPrimeNumber(randomNumber);
-  return [randomNumber, String(isPrime ? 'yes' : 'no')];
+  return [randomNumber, isPrime ? 'yes' : 'no'];
 };
 
 export default () => playGame(description, getQuestionAndAnswer);
