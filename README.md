@@ -12,15 +12,15 @@ This is a kit of games to train your brain.
         $ git clone https://github.com/artzzon/frontend-project-lvl1.git
 
         $cd frontend-project-lvl1
-
-## Run
-
-If you want games to run from any directory, take a few simple steps:
-
+        
         $ npm install
 
         $ make install
-        
+
+## Run
+
+If you want games to run from any directory run the following command
+
         $ npm link
 
 Also you can use the following `make` commands in the package folder
