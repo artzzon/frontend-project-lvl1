@@ -13,13 +13,12 @@ This is a kit of games to train your brain.
 
         $cd frontend-project-lvl1
 
-        $ make install
-
 ## Run
 
 If you want games to run from any directory, take a few simple steps:
 
         $ npm install
+        $ make install
         $ npm link
 
 Also you can use the following `make` commands in the package folder
